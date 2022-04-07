@@ -1,7 +1,17 @@
-**Biological Interacting Units identified in human protein networks reveal tissue-functional diversification and its impact on disease**
+# **BioInt-U method**
 
-Biological functions are orchestrated through the dynamic interaction of large pools of macromolecules including proteins. Thus, each functional consortium will present its own protein-interaction fingerprint. The same protein can be involved in different functions and so be located in distinct positions across the functional modules. From this it translates that when a protein activity is truncated, it will have varying impact depending on the biological process and in a higher-order level, on the tissue interactomic context.
 
-The aim of our research was to define functionally collaborating protein consortia in 33 human tissue-specific protein-protein interaction networks to model the distinctive functional and topological properties of functional models across tissues. Then, we mapped disease genes (DG) into the functional consortia to identify hallmark properties associated to functions enriched in DG.
 
-The insights presented in the research can be used to improve DG prioritization methods and functionally characterize biological samples. We show the usefulness of our strategy in RNA-Seq profiles from patients suffering from psoriasis and pulmonary fibrosis study cases. The strategy was built in R environment and we make available the code to implement it in new conditions or species.
+The goal of BioInt-U method is to identify Biological Interacting units. 
+
+
+
+First, it reconstructs tissue-specific protein-protein interaction networks. Each tissue network is functionally enriched in Gene Ontology Biological Processes. The GO-BP terms are used to define **BioInt units*** as groups of proteins physically interacting and sharing the same enriched terms. GO-BP sharing an excesive fraction of proteins can be simplified using  Jaccard coefficient.
+
+
+
+We also make available the necessary code to functionally and topologically characterize the BioInt units whitin their tissue-specific interactome.
+
+
+
+The R functions can be adapted to other tissue expression and protein-protein interaction data from species available in GoRuncR R package.
